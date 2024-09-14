@@ -122,3 +122,11 @@ The project is organized into two main parts:
 
 - Start Development Server: `npm run dev`
 - Start Server: `npm start` (inside the base folder, for production mode)
+
+### 7. Sample Screenshots
+
+| ![Landing Page](https://raw.githubusercontent.com/dakshinakasun/To-Do-App/main/images/LandingPage.png) | ![Login Page](https://raw.githubusercontent.com/dakshinakasun/To-Do-App/main/images/LoginPage.png) | ![Register Page](https://raw.githubusercontent.com/dakshinakasun/To-Do-App/main/images/RegisterPage.png) |
+|:--:|:--:|:--|
+
+| ![Incomplete Page](https://raw.githubusercontent.com/dakshinakasun/To-Do-App/main/images/IncompletePage.png) | ![Complete Page](https://raw.githubusercontent.com/dakshinakasun/To-Do-App/main/images/CompletePage.png) |
+|:--:|:--:|
