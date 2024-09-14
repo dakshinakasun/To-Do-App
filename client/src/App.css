@@ -1,0 +1,237 @@
+/* Define root CSS variables for primary and secondary colors */
+:root {
+    --primary: rgb(0, 132, 255);
+    --darkPrimary: rgb(4, 110, 209);
+    --secondary: rgb(211, 233, 253);
+    --darkSecondary: rgb(185, 214, 241);
+}
+
+/* Basic reset for body margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0.233px 8px lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+/* Styles for the logo image */
+.logo__wrapper img {
+    width: 55px;
+}
+
+.logo__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the logo text */
+.logo__wrapper h1 {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styles for the navigation menu */
+.navigation-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-menu li {
+    position: relative;
+}
+
+.navigation-menu li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 15px;
+    color: rgb(82, 81, 81);
+}
+
+/* Hover effect for links that are not active */
+.navigation-menu li a:hover:not(.activeNav) {
+    background-color: whitesmoke;
+    color: var(--primary);
+}
+
+/* Styles for user information dropdown */
+.userInfoNav {
+    border: 1px solid lightgray;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Styles for user avatar image */
+.userInfoNav img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+/* Styles for active navigation link */
+.activeNav {
+    background-color: whitesmoke;
+}
+
+.primaryText {
+    color: var(--primary);
+}
+
+/* Styles for primary button */
+.primaryBtn {
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin: 1rem;
+}
+
+.primaryBtn:hover {
+    background-color: var(--darkPrimary);
+}
+
+/* Styles for secondary button */
+.secondaryBtn {
+    background-color: var(--secondary);
+    color: var(--darkPrimary);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin: 1rem;
+}
+
+.secondaryBtn:hover {
+    background-color: var(--darkSecondary);
+}
+
+/* Styles for hamburger menu (mobile view) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Navigation menu hidden on mobile */
+.navigation-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles for navigation menu when mobile menu is active */
+.navigation-menu.mobile-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+}
+
+.navigation-menu.mobile-active li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navigation-menu.mobile-active li a {
+    width: 100%;
+    /* Ensures links take full width */
+    padding: 0.8rem 1rem;
+    /* Adjusted padding for mobile view */
+    box-sizing: border-box;
+}
+
+/* Responsive Media Queries */
+/* For tablets (1024px) */
+@media screen and (max-width: 1024px) {
+    nav {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navigation-menu li a {
+        font-size: 14px;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        padding: 8px 20px;
+    }
+}
+
+/* Show hamburger and hide default menu for 768px and below */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navigation-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        padding: 0;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation-menu.mobile-active {
+        display: flex;
+    }
+
+    .navigation-menu li {
+        width: 100%;
+    }
+
+    .navigation-menu li a {
+        padding: 0.8rem 1rem;
+    }
+}
